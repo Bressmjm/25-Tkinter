@@ -2,38 +2,52 @@
 This project lets you try out Tkinter/Ttk and practice it!
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Joshua Bressman.
+"""  # : 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import tkinter
 from tkinter import ttk
 
 
 def main():
+    root = tkinter.Tk()
+    frame1 = ttk.Frame(root,padding=10)
+    frame1.grid()
+    myfunctions = ttk.Entry(frame1)
+    myfunctions.grid()
+    goforwardbutton = ttk.Button(frame1,text='Nope')
+    goforwardbutton['command'] = (lambda: printinsides(myfunctions))
+    goforwardbutton.grid()
+    root.mainloop()
+def printinsides(myfunction):
+    contents = myfunction.get
+    print(contents)
+    sequence = ['Nope', 'Nu Uh', 'Nice Try', 'Never Gonna Happen', 'Stop Trying', 'No', 'Negative']
+    print(sequence[0])
     """ Constructs a GUI with stuff on it. """
     # ------------------------------------------------------------------
-    # TODO: 2. After reading and understanding the m1e module,
+    # : 2. After reading and understanding the m1e module,
     #   ** make a window that shows up. **
     # ------------------------------------------------------------------
 
     # ------------------------------------------------------------------
-    # TODO: 3. After reading and understanding the m2e module,
+    # : 3. After reading and understanding the m2e module,
     #   ** put a Frame on the window. **
     # ------------------------------------------------------------------
 
     # ------------------------------------------------------------------
-    # TODO: 4. After reading and understanding the m2e module,
+    # : 4. After reading and understanding the m2e module,
     #   ** put a Button on the Frame. **
     # ------------------------------------------------------------------
 
     # ------------------------------------------------------------------
-    # TODO: 5. After reading and understanding the m3e module,
+    # : 5. After reading and understanding the m3e module,
     #   ** make your Button respond to a button-press **
     #   ** by printing   "Hello"  on the Console.     **
     # ------------------------------------------------------------------
 
     # ------------------------------------------------------------------
-    # TODO: 6. After reading and understanding the m4e module,
+    # : 6. After reading and understanding the m4e module,
     #   -- Put an Entry box on the Frame.
     #   -- Put a second Button on the Frame.
     #   -- Make this new Button, when pressed, print "Hello"
@@ -42,7 +56,7 @@ def main():
     # ------------------------------------------------------------------
 
     # ------------------------------------------------------------------
-    # TODO: 7.
+    # : 7.
     #    -- Put a second Entry on the Frame.
     #    -- Put a third Button on the frame.
     #    -- Make this new Button respond to a button-press as follows:
